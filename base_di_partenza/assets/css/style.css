@@ -198,12 +198,90 @@ footer {
 footer a {
   color: fuchsia;
 }
-@media screen (min-width 320px) {
+@media screen and (min-width: 320px) {
+  body {
+    font-size: 1.4rem; /* Mantiene la dimensione base per dispositivi mobili */
+  }
+  header nav li {
+    margin: 0 5px; /* Meno spazio su schermi piccoli */
+  }
 }
-@media screen (min-width 576px) {
+
+@media screen and (min-width: 576px) {
+  body {
+    font-size: 1.6rem; /* Leggermente più grande per i tablet */
+  }
+  header nav li {
+    margin: 0 10px; /* Margine standard */
+  }
 }
-@media screen (min-width 768px) {
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.8rem; /* Maggiore dimensione del font per schermi più grandi */
+  }
+  main {
+    padding: 3em 2em; /* Maggiore spazio per schermi più grandi */
+  }
+  aside div {
+    padding: 1.5em; /* Maggiore padding negli elementi dell' aside */
+  }
 }
-@media screen (min-width 1200px) {
+
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 2rem; /* Dimensione font più grande per grandi desktop */
+  }
+  header {
+    padding: 3em 2em; /* Aumenta il padding dell'header */
+  }
 }
-@media print();
+/* MEDIA PRINT */
+@media print {
+  body {
+    font-size: 12pt; /* Dimensione del font per la stampa */
+    line-height: 1.2; /* Line-height per facilità di lettura */
+    color: black; /* Assicura che il testo sia nero */
+    background: none; /* Rimuove lo sfondo */
+  }
+
+  header,
+  footer {
+    display: none; /* Nasconde header e footer nella stampa */
+  }
+
+  main {
+    padding: 0; /* Rimuove il padding nel main */
+    background-color: white; /* Assicura uno sfondo bianco per la stampa */
+  }
+
+  table {
+    width: 100%; /* Rende la tabella completa per la stampa */
+    border-collapse: collapse; /* Collassa i bordi delle celle nella tabella */
+  }
+
+  th,
+  td {
+    border: 1px solid black; /* Aggiunge un bordo per le celle */
+    padding: 8px; /* Padding per le celle */
+    text-align: left; /* Allinea il testo a sinistra */
+  }
+
+  h1,
+  h2 {
+    page-break-after: avoid; /* Evita interruzioni di pagina dopo gli header */
+  }
+
+  a {
+    color: black; /* Rende i link neri */
+  }
+
+  iframe {
+    display: none; /* Nasconde gli iframe nella stampa */
+  }
+
+  /* Nasconde gli aside per la stampa */
+  aside {
+    display: none;
+  }
+}
