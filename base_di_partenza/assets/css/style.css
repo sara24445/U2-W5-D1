@@ -229,6 +229,15 @@ footer a {
 }
 
 @media screen and (min-width: 1200px) {
+  lorenzoLione 28/10/2024 17: 06 • header div, header nav, header nav ul,
+    header nav ul li, header div img, header div p {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: middle;
+    font-size: 1rem;
+  }
+
   body {
     font-size: 2rem; /* Dimensione font più grande per grandi desktop */
   }
